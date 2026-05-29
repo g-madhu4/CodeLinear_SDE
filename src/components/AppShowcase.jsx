@@ -61,7 +61,7 @@ export default function AppShowcase() {
           <div className={styles.section1Right}>
             <div className={styles.infoBox}>
               <h3>Fully compliant with regulatory requirement</h3>
-              <p>The governance of risk management with regulations is achieved by our risk management framework that is fully integrated to work with digital bank's operational-risk protocols and procedures.</p>
+              <p>The governance of risk management with regulations is achieved by our risk management framework that is fully integrated to work with digital bank&apos;s operational-risk protocols and procedures.</p>
               
               <div className={styles.featuresList}>
                 <div className={styles.featureItem}>

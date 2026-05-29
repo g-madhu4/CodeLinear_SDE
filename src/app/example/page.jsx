@@ -102,7 +102,7 @@ export default function ExamplePage() {
           
           <div className={styles.code}>
             <p><strong>Import Image component:</strong></p>
-            <code>import Image from 'next/image'</code>
+            <code>{'import Image from \'next/image\''}</code>
           </div>
 
           <div className={styles.code}>
@@ -140,8 +140,8 @@ export default function ExamplePage() {
           <h3>💡 Best Practices</h3>
           <ul>
             <li>✅ Use Next.js Image component for optimization</li>
-            <li>✅ Add `priority` attribute to above-the-fold images</li>
-            <li>✅ Use responsive image sizes with `sizes` prop</li>
+            <li>✅ Add the priority attribute to above-the-fold images</li>
+            <li>✅ Use responsive image sizes with the sizes prop</li>
             <li>✅ Keep images under 500KB for better performance</li>
             <li>✅ Use descriptive alt text for accessibility</li>
             <li>✅ Use WebP format when possible</li>
