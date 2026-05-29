@@ -1,0 +1,660 @@
+/* ===== CTA BANNER SECTION STYLING ===== */
+
+.ctaBannerSection {
+  background-color: #000d12;
+  padding: 8rem 2rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ctaBannerSection::before {
+  content: 'CB7';
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%);
+  width: 1141px;
+  height: 687px;
+  opacity: 0.25;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 572.63px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: transparent;
+  pointer-events: none;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-rendering: geometricPrecision;
+  -webkit-text-stroke: 2px rgba(0, 180, 253, 0.2);
+}
+
+/* .ctaBannerSection::after {
+  content: 'CB7';
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  width: 1141px;
+  height: 687px;
+  opacity: 0.15;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 572.63px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: rgba(0, 180, 253, 0.4);
+  pointer-events: none;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-rendering: geometricPrecision;
+  -webkit-text-stroke: 0.3px rgba(0, 180, 253, 0.2);
+} */
+
+/* Main Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.title {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 52px;
+  line-height: 120%;
+  letter-spacing: -1%;
+  color: rgba(233, 244, 255, 1);
+  margin: 0;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  max-width: 500px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.buttonSecondary {
+  padding: 0.875rem 2rem;
+  background-color: transparent;
+  border: 1.5px solid rgba(0, 180, 253, 0.6);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-family: 'Chivo', sans-serif;
+  transition: all 0.5s ease;
+}
+
+.buttonSecondary:hover {
+     color: #002efd;
+  background: white;
+  border-color: #00b4fd;
+}
+
+.buttonPrimary {
+ width: fit-content;
+  padding: 0.875rem 2rem;
+    background: linear-gradient(106.53deg, #00B4FD -5.68%, #003ACE 86.98%);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+    font-weight: 108px;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
+    font-family: 'Chivo', sans-serif;
+}
+
+.buttonPrimary:hover {
+ color: #002efd;
+    border-color: #00b4fd;
+    background: white;
+    box-shadow: 0px 0px 15px 0px rgba(2, 5, 29, 0.1);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* ===== DESKTOP (1025px+) ===== */
+
+@media (min-width: 1025px) {
+  .ctaBannerSection {
+    background-color: #000d12;
+    padding: 8rem 2rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .ctaBannerSection::before {
+    font-size: 572.63px;
+    width: 1141px;
+    height: 687px;
+    left: 20%;
+    opacity: 0.25;
+  }
+
+  .container {
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  .content {
+    gap: 1.5rem;
+  }
+
+  .title {
+    font-size: 52px;
+    line-height: 120%;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 500px;
+  }
+
+  .buttons {
+    gap: 1.5rem;
+    justify-content: flex-end;
+  }
+
+  .buttonSecondary,
+  .buttonPrimary {
+    padding: 0.875rem 2rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* ===== LARGE TABLET/MEDIUM DESKTOP (900px - 1024px) ===== */
+
+@media (min-width: 900px) and (max-width: 1024px) {
+  .ctaBannerSection {
+    padding: 7rem 1.75rem;
+    justify-content: center;
+  }
+
+  .ctaBannerSection::before {
+    font-size: 450px;
+    width: 900px;
+    height: 550px;
+    left: 15%;
+    opacity: 0.22;
+  }
+
+  .container {
+    max-width: 1300px;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+
+  .content {
+    gap: 1.35rem;
+  }
+
+  .title {
+    font-size: 3.2rem;
+    line-height: 1.2;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    max-width: 450px;
+  }
+
+  .buttons {
+    gap: 1.25rem;
+    justify-content: flex-end;
+  }
+
+  .buttonSecondary,
+  .buttonPrimary {
+    padding: 0.8rem 1.85rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* ===== TABLET (769px - 899px) ===== */
+
+@media (min-width: 769px) and (max-width: 899px) {
+  .ctaBannerSection {
+    padding: 6rem 1.5rem;
+    justify-content: center;
+  }
+
+  .ctaBannerSection::before {
+    font-size: 350px;
+    width: 700px;
+    height: 450px;
+    left: 10%;
+    opacity: 0.2;
+  }
+
+  .container {
+    max-width: 1200px;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .content {
+    gap: 1.25rem;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    letter-spacing: -0.8%;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .buttons {
+    gap: 1rem;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .buttonSecondary,
+  .buttonPrimary {
+    padding: 0.75rem 1.75rem;
+    font-size: 0.75rem;
+    width: auto;
+  }
+}
+
+/* ===== SMALL TABLET (641px - 768px) ===== */
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .ctaBannerSection {
+    padding: 5rem 1.25rem;
+    justify-content: center;
+  }
+
+  .ctaBannerSection::before {
+    font-size: 280px;
+    width: 550px;
+    height: 350px;
+    left: 5%;
+    opacity: 0.18;
+  }
+
+  .container {
+    max-width: 1000px;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .content {
+    gap: 1.15rem;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    letter-spacing: -0.7%;
+  }
+
+  .description {
+    font-size: 0.85rem;
+    line-height: 1.45;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .buttons {
+    gap: 0.9rem;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .buttonSecondary,
+  .buttonPrimary {
+    padding: 0.7rem 1.6rem;
+    font-size: 0.7rem;
+    width: auto;
+  }
+}
+
+/* ===== MOBILE LANDSCAPE (481px - 640px) ===== */
+
+@media (min-width: 481px) and (max-width: 640px) {
+  .ctaBannerSection {
+    padding: 4rem 1.1rem;
+    justify-content: center;
+  }
+
+  .ctaBannerSection::before {
+    font-size: 220px;
+    width: 400px;
+    height: 280px;
+    left: 0%;
+    opacity: 0.15;
+  }
+
+  .container {
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .content {
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 1.85rem;
+    line-height: 1.18;
+    letter-spacing: -0.6%;
+  }
+
+  .description {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .buttons {
+    gap: 0.75rem;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .buttonSecondary,
+  .buttonPrimary {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.65rem;
+    width: auto;
+  }
+}
+
+/* ===== MOBILE (up to 480px) ===== */
+
+@media (max-width: 480px) {
+  .ctaBannerSection {
+    background-color: #000d12;
+    padding: 3rem 1rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ctaBannerSection::before {
+    content: 'CB7';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 180px;
+    opacity: 0.12;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 150px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: transparent;
+    pointer-events: none;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-rendering: geometricPrecision;
+    -webkit-text-stroke: 1.5px rgba(0, 180, 253, 0.15);
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.95rem;
+    text-align: center;
+  }
+
+  .title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 1.18;
+    letter-spacing: -0.5%;
+    color: rgba(233, 244, 255, 1);
+    margin: 0;
+  }
+
+  .description {
+    font-size: 0.75rem;
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 0.65rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .buttonSecondary {
+    padding: 0.6rem 1.4rem;
+    background-color: transparent;
+    border: 1.25px solid rgba(0, 180, 253, 0.5);
+    color: #ffffff;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-family: 'Chivo', sans-serif;
+    width: 100%;
+  }
+
+  .buttonSecondary:hover {
+    color: #002efd;
+    background: white;
+    border-color: #00b4fd;
+  }
+
+  .buttonPrimary {
+    width: 100%;
+    padding: 0.6rem 1.4rem;
+    background: linear-gradient(106.53deg, #00B4FD -5.68%, #003ACE 86.98%);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-family: 'Chivo', sans-serif;
+    font-size: 0.6rem;
+  }
+
+  .buttonPrimary:hover {
+    color: #002efd;
+    border-color: #00b4fd;
+    background: white;
+    box-shadow: 0px 0px 12px 0px rgba(2, 5, 29, 0.08);
+  }
+}
+
+/* ===== EXTRA SMALL MOBILE (up to 380px) ===== */
+
+@media (max-width: 380px) {
+  .ctaBannerSection {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .ctaBannerSection::before {
+    font-size: 120px;
+    width: 200px;
+    height: 140px;
+    opacity: 0.1;
+  }
+
+  .container {
+    gap: 1.25rem;
+  }
+
+  .content {
+    gap: 0.8rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+    line-height: 1.15;
+    letter-spacing: -0.4%;
+  }
+
+  .description {
+    font-size: 0.7rem;
+    line-height: 1.3;
+  }
+
+  .buttons {
+    gap: 0.55rem;
+  }
+
+  .buttonSecondary,
+  .buttonPrimary {
+    padding: 0.55rem 1.2rem;
+    font-size: 0.55rem;
+    border-radius: 4px;
+  }
+}
+
+/* ===== LANDSCAPE ORIENTATION FIXES ===== */
+
+@media (max-height: 600px) and (orientation: landscape) {
+  .ctaBannerSection {
+    padding: 2.5rem 1rem;
+  }
+
+  .ctaBannerSection::before {
+    font-size: 180px;
+    width: 350px;
+    height: 250px;
+    opacity: 0.15;
+  }
+
+  .container {
+    gap: 1.5rem;
+  }
+
+  .content {
+    gap: 0.85rem;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    line-height: 1.15;
+    margin-bottom: 0.3rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .buttons {
+    gap: 0.6rem;
+    justify-content: center;
+  }
+
+  .buttonSecondary,
+  .buttonPrimary {
+    padding: 0.6rem 1.3rem;
+    font-size: 0.65rem;
+  }
+}
+
+/* ===== TABLET SPECIFIC OPTIMIZATION ===== */
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .container {
+    margin: 0 auto;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+}

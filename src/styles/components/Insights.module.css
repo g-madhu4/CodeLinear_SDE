@@ -1,0 +1,944 @@
+/* ===== INSIGHTS SECTION STYLING ===== */
+
+.insightsSection {
+  background-color: #000d12;
+  padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Main Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+}
+
+/* Left Section */
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-top: 2rem;
+}
+
+.mainTitle {
+font-family: 'Archivo', sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 37px;
+line-height: 120%;
+letter-spacing: -1%;
+
+color: rgba(233, 244, 249, 1);
+}
+
+.insightsButton {
+  width: fit-content;
+  padding: 0.875rem 2.5rem;
+  background-color: transparent;
+  border: 2px solid rgba(0, 180, 253, 0.5);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+   font-family: 'Chivo Mono', monospace;
+}
+
+.insightsButton:hover {
+  background-color: white;
+  border-color: #00b4fd;
+  box-shadow: 0 0 20px rgba(0, 180, 253, 0.2);
+  color: #00b4fd;
+}
+
+/* Middle Section - Icons Grid */
+.middleSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(25, 60, 100, 0.3) 0%, rgba(0, 100, 200, 0.2) 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 180, 253, 0.2);
+}
+
+.iconsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  justify-items: center;
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Featured Card Wrapper */
+.rightCardsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.rightCardsSection > .card:first-child {
+  background: rgba(10, 25, 40, 0.6);
+  border: 1px solid rgba(0, 180, 253, 0.4);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  align-items: start;
+}
+
+.rightCardsSection > .card:first-child .iconsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  justify-items: center;
+}
+
+.rightCardsSection > .card:first-child > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rightCardsSection > .card:first-child .cardContent {
+  padding: 0;
+}
+
+.rightCardsSection > .card:first-child .readMoreBtn {
+  width: fit-content;
+  margin: 0;
+}
+
+.rightCardsSection .cardsSubGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.cardsSubGrid .card {
+  align-items: center;
+}
+
+/* Right Section */
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Bottom Section */
+.bottomSection {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Cards Grid */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.cardLarge {
+  grid-column: 1;
+  border: 1px solid rgba(0, 180, 253, 0.2);
+  background: linear-gradient(135deg, rgba(0, 128, 255, 0.05) 0%, rgba(0, 180, 253, 0.05) 100%);
+}
+
+.cardsSubGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Card Styles */
+.card {
+  background: rgba(10, 25, 40, 0.6);
+  border: 1px solid rgba(0, 180, 253, 0.4);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  border-color: rgba(0, 180, 253, 0.4);
+  background: rgba(20, 30, 40, 1);
+  box-shadow: 0 8px 32px rgba(0, 180, 253, 0.1);
+}
+
+.cardSelected {
+  border: 2px solid #e91e63;
+  background: linear-gradient(135deg, rgba(233, 30, 99, 0.1) 0%, rgba(0, 180, 253, 0.05) 100%);
+  box-shadow: 0 0 30px rgba(233, 30, 99, 0.3), inset 0 0 30px rgba(233, 30, 99, 0.1);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(0, 128, 255, 0.1) 0%, rgba(0, 180, 253, 0.05) 100%);
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+
+.cardContent {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-family: 'Archivo', sans-serif;
+}
+
+.category {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #00b4fd;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #ffffff;
+  margin: 0.5rem 0 0 0;
+  font-family: 'Archivo', sans-serif;
+}
+
+.cardMeta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: #00b4fd;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  font-family: 'Archivo', sans-serif;
+}
+
+.author {
+  font-weight: 600;
+  font-family: 'Archivo', sans-serif;
+}
+
+.date {
+  opacity: 0.8;
+  font-family: 'Archivo', sans-serif;
+}
+
+.readMoreBtn {
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  border: 1.5px solid rgba(0, 180, 253, 0.4);
+  color: #00b4fd;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Chivo', sans-serif;
+}
+
+.readMoreBtn:hover {
+  background-color:white; 
+  columns: rgba(0, 180, 253, 0.1);
+  border-color: #00b4fd;
+}
+
+.cardsSubGrid .card .readMoreBtn {
+  width: 90%;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  border: 1.5px solid rgba(0, 180, 253, 0.5);
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+/* Read All Link */
+.readAllLink {
+  display: inline-block;
+  text-align: right;
+  color: #00b4fd;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+  width: fit-content;
+  margin-left: auto;
+  position: relative;
+}
+
+.readAllLink::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00b4fd, #003ace);
+  transition: width 0.3s ease;
+}
+
+.readAllLink:hover {
+  color: #00d4ff;
+  letter-spacing: 0.1em;
+}
+
+.readAllLink:hover::after {
+  width: 100%;
+}
+
+/* ===== COMPREHENSIVE RESPONSIVE DESIGN ===== */
+
+/* Large Tablet / Medium Desktop (900-1024px) */
+@media (max-width: 1024px) and (min-width: 900px) {
+  .insightsSection {
+    padding: 5rem 1.75rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .mainTitle {
+    font-size: 2.25rem;
+    line-height: 120%;
+  }
+
+  .leftSection {
+    gap: 2rem;
+    padding-top: 1.5rem;
+  }
+
+  .insightsButton {
+    padding: 0.8rem 2rem;
+    font-size: 0.8rem;
+  }
+
+  .rightCardsSection > .card:first-child {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  .iconsGrid {
+    gap: 1.5rem;
+  }
+
+  .iconBox {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cardsSubGrid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+
+  .cardContent {
+    padding: 1.25rem;
+    gap: 0.6rem;
+  }
+
+  .readMoreBtn {
+    padding: 0.7rem 1.25rem;
+    font-size: 0.8rem;
+  }
+
+  .cardsSubGrid .card .readMoreBtn {
+    width: 85%;
+    padding: 0.9rem 1.25rem;
+    margin-bottom: 0.9rem;
+  }
+}
+
+/* Tablet (769-899px) */
+@media (max-width: 899px) and (min-width: 769px) {
+  .insightsSection {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+    line-height: 115%;
+  }
+
+  .leftSection {
+    gap: 1.75rem;
+    padding-top: 1.25rem;
+  }
+
+  .insightsButton {
+    padding: 0.75rem 1.75rem;
+    font-size: 0.75rem;
+  }
+
+  .rightCardsSection {
+    gap: 1.75rem;
+  }
+
+  .rightCardsSection > .card:first-child {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  .iconsGrid {
+    gap: 1.25rem;
+  }
+
+  .iconBox {
+    width: 65px;
+    height: 65px;
+  }
+
+  .icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .cardsSubGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cardTitle {
+    font-size: 0.95rem;
+  }
+
+  .cardContent {
+    padding: 1.15rem;
+    gap: 0.5rem;
+  }
+
+  .category {
+    font-size: 0.7rem;
+  }
+
+  .cardMeta {
+    font-size: 0.8rem;
+    gap: 0.8rem;
+  }
+
+  .readMoreBtn {
+    padding: 0.65rem 1.15rem;
+    font-size: 0.75rem;
+  }
+
+  .cardsSubGrid .card .readMoreBtn {
+    width: 80%;
+    padding: 0.8rem 1.15rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .readAllLink {
+    font-size: 0.8rem;
+  }
+}
+
+/* Small Tablet (641-768px) */
+@media (max-width: 768px) and (min-width: 641px) {
+  .insightsSection {
+    padding: 4rem 1.25rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .mainTitle {
+    font-size: 1.75rem;
+    line-height: 115%;
+  }
+
+  .leftSection {
+    gap: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  .insightsButton {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.7rem;
+  }
+
+  .rightCardsSection {
+    gap: 1.5rem;
+  }
+
+  .rightCardsSection > .card:first-child {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.15rem;
+  }
+
+  .iconsGrid {
+    gap: 1.1rem;
+  }
+
+  .iconBox {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cardsSubGrid {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+  }
+
+  .cardTitle {
+    font-size: 0.9rem;
+  }
+
+  .cardContent {
+    padding: 1.05rem;
+    gap: 0.5rem;
+  }
+
+  .category {
+    font-size: 0.65rem;
+  }
+
+  .cardMeta {
+    font-size: 0.75rem;
+    gap: 0.7rem;
+  }
+
+  .readMoreBtn {
+    padding: 0.6rem 1rem;
+    font-size: 0.7rem;
+  }
+
+  .cardsSubGrid .card .readMoreBtn {
+    width: 75%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .readAllLink {
+    font-size: 0.75rem;
+  }
+}
+
+/* Mobile Landscape (481-640px) */
+@media (max-width: 640px) and (min-width: 481px) {
+  .insightsSection {
+    padding: 3rem 1rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .mainTitle {
+    font-size: 1.5rem;
+    line-height: 110%;
+  }
+
+  .leftSection {
+    gap: 1.25rem;
+    padding-top: 0.75rem;
+  }
+
+  .insightsButton {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.65rem;
+  }
+
+  .rightCardsSection {
+    gap: 1.25rem;
+  }
+
+  .rightCardsSection > .card:first-child {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    padding: 1rem;
+  }
+
+  .iconsGrid {
+    gap: 0.9rem;
+  }
+
+  .iconBox {
+    width: 55px;
+    height: 55px;
+  }
+
+  .icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .cardsSubGrid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .cardTitle {
+    font-size: 0.85rem;
+  }
+
+  .cardContent {
+    padding: 0.95rem;
+    gap: 0.45rem;
+  }
+
+  .category {
+    font-size: 0.6rem;
+  }
+
+  .cardMeta {
+    font-size: 0.7rem;
+    gap: 0.6rem;
+  }
+
+  .readMoreBtn {
+    padding: 0.55rem 0.9rem;
+    font-size: 0.65rem;
+  }
+
+  .cardsSubGrid .card .readMoreBtn {
+    width: 70%;
+    padding: 0.7rem 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .readAllLink {
+    font-size: 0.7rem;
+  }
+}
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+  .insightsSection {
+    padding: 2.5rem 0.9rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+  }
+
+  .mainTitle {
+    font-size: 1.3rem;
+    line-height: 110%;
+    letter-spacing: -0.005em;
+  }
+
+  .leftSection {
+    gap: 1rem;
+    padding-top: 0.5rem;
+  }
+
+  .insightsButton {
+    padding: 0.6rem 1.1rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+  }
+
+  .rightCardsSection {
+    gap: 1rem;
+  }
+
+  .rightCardsSection > .card:first-child {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 0.9rem;
+  }
+
+  .rightCardsSection > .card:first-child .iconsGrid {
+    gap: 0.8rem;
+  }
+
+  .iconsGrid {
+    gap: 0.8rem;
+  }
+
+  .iconBox {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cardsSubGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cardTitle {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .cardContent {
+    padding: 0.9rem;
+    gap: 0.4rem;
+  }
+
+  .category {
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+  }
+
+  .cardMeta {
+    font-size: 0.65rem;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .readMoreBtn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.6rem;
+    border-radius: 5px;
+  }
+
+  .cardsSubGrid .card .readMoreBtn {
+    width: 65%;
+    padding: 0.65rem 0.8rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .readAllLink {
+    font-size: 0.65rem;
+  }
+}
+
+/* Extra Small Mobile (up to 380px) */
+@media (max-width: 380px) {
+  .insightsSection {
+    padding: 2rem 0.75rem;
+  }
+
+  .container {
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .mainTitle {
+    font-size: 1.15rem;
+    line-height: 105%;
+  }
+
+  .leftSection {
+    gap: 0.9rem;
+    padding-top: 0.35rem;
+  }
+
+  .insightsButton {
+    padding: 0.55rem 0.95rem;
+    font-size: 0.55rem;
+  }
+
+  .rightCardsSection {
+    gap: 0.9rem;
+  }
+
+  .rightCardsSection > .card:first-child {
+    gap: 0.7rem;
+    padding: 0.8rem;
+  }
+
+  .iconsGrid {
+    gap: 0.65rem;
+  }
+
+  .iconBox {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .cardsSubGrid {
+    gap: 0.9rem;
+  }
+
+  .cardTitle {
+    font-size: 0.75rem;
+  }
+
+  .cardContent {
+    padding: 0.8rem;
+    gap: 0.35rem;
+  }
+
+  .category {
+    font-size: 0.5rem;
+  }
+
+  .cardMeta {
+    font-size: 0.6rem;
+    gap: 0.4rem;
+  }
+
+  .readMoreBtn {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.55rem;
+  }
+
+  .cardsSubGrid .card .readMoreBtn {
+    width: 60%;
+    padding: 0.6rem 0.7rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .readAllLink {
+    font-size: 0.6rem;
+  }
+}
+
+/* ===== LANDSCAPE ORIENTATION FIXES ===== */
+
+@media (max-height: 600px) and (orientation: landscape) {
+  .insightsSection {
+    padding: 2.5rem 1rem;
+  }
+
+  .container {
+    gap: 1.5rem;
+  }
+
+  .mainTitle {
+    font-size: 1.35rem;
+  }
+
+  .leftSection {
+    gap: 1rem;
+  }
+
+  .rightCardsSection {
+    gap: 1rem;
+  }
+
+  .cardsSubGrid {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .cardTitle {
+    font-size: 0.85rem;
+  }
+
+  .cardContent {
+    padding: 0.9rem;
+  }
+}
+
+/* ===== TABLET SPECIFIC OPTIMIZATION ===== */
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .cardsSubGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .rightCardsSection > .card:first-child {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== DESKTOP OPTIMIZATION ===== */
+
+@media (min-width: 1025px) {
+  .insightsSection {
+    padding: 6rem 2rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .mainTitle {
+    font-size: 37px;
+  }
+
+  .rightCardsSection > .card:first-child {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .cardsSubGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,264 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding-top: 100px;
+}
+
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.exampleBlock {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.exampleBlock h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.exampleBlock p {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+/* Code Blocks */
+.code {
+  background: #f3f4f6;
+  border-left: 4px solid #3b82f6;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  overflow-x: auto;
+}
+
+.code p {
+  margin: 0 0 0.5rem 0;
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.code code {
+  display: block;
+  color: #1f2937;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  white-space: pre;
+}
+
+/* Image Placeholders */
+.imagePlaceholder {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 12px;
+  aspect-ratio: 4/3;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.imagePlaceholder small {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+/* Image Grid */
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.imageGrid > div {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imageGrid > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Theme Selector */
+.themeSelector {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.themeSelector button {
+  padding: 0.75rem 1.5rem;
+  background: #f3f4f6;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.themeSelector button:hover {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.themeSelector button.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+/* Image Container - Dark Theme */
+.imageContainer {
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+.imageContainer.dark {
+  background: #1f2937;
+  border: 1px solid #374151;
+}
+
+.imageContainer.light {
+  background: #f9fafb;
+  border: 2px dashed #3b82f6;
+}
+
+.imageContainer .imagePlaceholder {
+  aspect-ratio: 16/9;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.galleryItem {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.galleryItem:hover {
+  transform: scale(1.05);
+}
+
+.galleryItem .imagePlaceholder {
+  aspect-ratio: 1;
+}
+
+/* Reference Section */
+.reference {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-top: 3rem;
+}
+
+.reference h2 {
+  color: white;
+  margin-bottom: 1.5rem;
+  border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.reference .code {
+  background: rgba(0, 0, 0, 0.2);
+  border-left-color: rgba(255, 255, 255, 0.5);
+  color: white;
+}
+
+.reference .code p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.reference .code code {
+  color: white;
+}
+
+/* Tips Section */
+.tips {
+  background: #ecfdf5;
+  border-left: 4px solid #10b981;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.tips h3 {
+  color: #059669;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.tips ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tips li {
+  color: #065f46;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .exampleBlock {
+    padding: 1.5rem;
+  }
+
+  .exampleBlock h2 {
+    font-size: 1.25rem;
+  }
+
+  .imageGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .reference,
+  .tips {
+    padding: 1.5rem;
+  }
+}
